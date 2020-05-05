@@ -1,1 +1,8 @@
-
+from scipy.stats import chisqr
+import numpy as  np
+def chi_distribution(val, df):
+    x=chisqr.isf(val, df)
+    x=round(x,4)
+    return x
+val, df =float(input("enter val")),float(input("enter dgree of freedom"))
+print(chi_distribution(val,df))
